@@ -9,6 +9,11 @@ public class Calculator {
     int boardWidth = 360; // Window board
     int boardHeight = 540;
 
+    Color customLightGray = new Color(212, 212, 210);
+    Color customDarkGray = new Color(80, 80, 80);
+    Color customBlack = new Color(28, 28, 28);
+    Color customOrange = new Color(255, 149, 0);
+    
     JFrame frame = new JFrame("calculator");
 
 
