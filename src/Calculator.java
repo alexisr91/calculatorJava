@@ -13,8 +13,11 @@ public class Calculator {
     Color customDarkGray = new Color(80, 80, 80);
     Color customBlack = new Color(28, 28, 28);
     Color customOrange = new Color(255, 149, 0);
-    
+
     JFrame frame = new JFrame("calculator");
+    JLabel displayLabel = new JLabel();
+    JPanel displayPanel = new JPanel();
+
 
 
     Calculator(){
@@ -24,5 +27,18 @@ public class Calculator {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
+
+
+        displayLabel.setBackground(customBlack);
+        displayLabel.setForeground(Color.white);
+        displayLabel.setFont(new Font("Arial",Font.PLAIN,80));
+        displayLabel.setHorizontalAlignment(JLabel.RIGHT);
+        displayLabel.setText("0");
+        displayLabel.setOpaque(true);
+
+
+        displayPanel.setLayout(new BorderLayout());
+        displayPanel.add(displayLabel);
+        frame.add(displayPanel, BorderLayout.NORTH);
     }
 }
